@@ -124,6 +124,8 @@ public class ImageCarouselViewController:UIPageViewController, ImageViewerTransi
         
         options.forEach {
             switch $0 {
+                case .viewDidLoad(let viewDidLoadClosure):
+                    viewDidLoadClosure(self)
                 case .theme(let theme):
                     self.theme = theme
                 case .contentMode(let contentMode):

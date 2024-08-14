@@ -2,6 +2,7 @@ import UIKit
 
 public enum ImageViewerOption {
     
+    case viewDidLoad((ImageCarouselViewController) -> Void)
     case theme(ImageViewerTheme)
     case contentMode(UIView.ContentMode)
     case closeIcon(UIImage)
